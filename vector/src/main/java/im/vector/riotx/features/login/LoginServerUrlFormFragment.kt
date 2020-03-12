@@ -24,7 +24,6 @@ import butterknife.OnClick
 import com.jakewharton.rxbinding3.widget.textChanges
 import im.vector.riotx.R
 import im.vector.riotx.core.extensions.hideKeyboard
-import im.vector.riotx.core.utils.openUrlInExternalBrowser
 import kotlinx.android.synthetic.main.fragment_login_server_url_form.*
 import javax.inject.Inject
 
@@ -79,11 +78,6 @@ class LoginServerUrlFormFragment @Inject constructor() : AbstractLoginFragment()
             else               -> error("This fragment should not be displayed in matrix.org mode")
         }
     }*/
-
-    @OnClick(R.id.loginServerUrlFormLearnMore)
-    fun learnMore() {
-        openUrlInExternalBrowser(requireActivity(), MODULAR_LINK)
-    }
 
     override fun resetViewModel() {
         loginViewModel.handle(LoginAction.ResetHomeServerUrl)

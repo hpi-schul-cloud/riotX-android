@@ -102,9 +102,7 @@ class LoginServerSelectionFragment @Inject constructor() : AbstractLoginFragment
 
     @OnClick(R.id.loginServerSubmit)
     fun submit() = withState(loginViewModel) { state ->
-        // TODO(JonasWanke): Change to live server when it's available
-        // loginViewModel.handle(LoginAction.UpdateHomeServer("https://matrix.${state.serverType.url}"))
-        loginViewModel.handle(LoginAction.UpdateHomeServer("https://matrix.stomt.com"))
+         loginViewModel.handle(LoginAction.UpdateHomeServer("https://${state.serverType.url}"))
     }
 
     override fun resetViewModel() {
