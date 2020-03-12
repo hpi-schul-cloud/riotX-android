@@ -1,34 +1,42 @@
 {
   "project_info": {
-    "project_number": "912726360885",
-    "firebase_url": "https://vector-alpha.firebaseio.com",
-    "project_id": "vector-alpha",
-    "storage_bucket": "vector-alpha.appspot.com"
+    "project_number": "303922186397",
+    "firebase_url": "https://schul-cloud-prod.firebaseio.com",
+    "project_id": "schul-cloud-prod",
+    "storage_bucket": "schul-cloud-prod.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:912726360885:android:4ef8f3a0021e774d",
+        "mobilesdk_app_id": "1:303922186397:android:5459627590feb8e0e02c74",
         "android_client_info": {
-          "package_name": "im.vector.riotx.debug"
+          "package_name": "hpi.messenger.schule.debug"
         }
       },
       "oauth_client": [
         {
-          "client_id": "912726360885-e87n3jva9uoj4vbidvijq78ebg02asv2.apps.googleusercontent.com",
+          "client_id": "303922186397-2k6q68n4hfffl5m6972le4hss9qh4o2l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "hpi.messenger.schule.debug",
+            "certificate_hash": "41bd63b3b612a15d9ba36a5245c393f2a9b992d1"
+          }
+        },
+        {
+          "client_id": "303922186397-snots3bito0pnv9ah32m6cnnqvq12tv5.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAFZX8IhIfgzdOZvxDP_ISO5WYoU7jmQ5c"
+          "current_key": "AIzaSyASeid9tEf5-dZ-mhZtcR3ZWzdDmRRV69Q"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "912726360885-rsae0i66rgqt6ivnudu1pv4tksg9i8b2.apps.googleusercontent.com",
+              "client_id": "303922186397-snots3bito0pnv9ah32m6cnnqvq12tv5.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
