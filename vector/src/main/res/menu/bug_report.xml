@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".features.rageshake.BugReportActivity">
 
-    <item
+    <!--<item
         android:id="@+id/ic_action_send_bug_report"
         android:icon="@drawable/ic_material_send_black"
         android:title="@string/send_bug_report"
-        app:showAsAction="always" />
+        app:showAsAction="always" />-->
 </menu>

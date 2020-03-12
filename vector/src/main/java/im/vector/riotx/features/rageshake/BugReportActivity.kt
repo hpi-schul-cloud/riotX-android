@@ -16,8 +16,6 @@
 
 package im.vector.riotx.features.rageshake
 
-import android.view.Menu
-import android.view.MenuItem
 import android.widget.Toast
 import androidx.core.view.isVisible
 import butterknife.OnCheckedChanged
@@ -75,7 +73,7 @@ class BugReportActivity : VectorBaseActivity() {
 
     override fun getMenuRes() = R.menu.bug_report
 
-    override fun onPrepareOptionsMenu(menu: Menu): Boolean {
+    /*override fun onPrepareOptionsMenu(menu: Menu): Boolean {
         menu.findItem(R.id.ic_action_send_bug_report)?.let {
             val isValid = !bug_report_mask_view.isVisible
 
@@ -84,9 +82,9 @@ class BugReportActivity : VectorBaseActivity() {
         }
 
         return super.onPrepareOptionsMenu(menu)
-    }
+    }*/
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+    /*override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.ic_action_send_bug_report -> {
                 if (bug_report_edit_text.text.toString().trim().length >= 10) {
@@ -98,7 +96,7 @@ class BugReportActivity : VectorBaseActivity() {
             }
         }
         return super.onOptionsItemSelected(item)
-    }
+    }*/
 
     /**
      * Send the bug report

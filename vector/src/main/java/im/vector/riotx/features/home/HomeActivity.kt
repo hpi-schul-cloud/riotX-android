@@ -39,7 +39,6 @@ import im.vector.riotx.core.extensions.replaceFragment
 import im.vector.riotx.core.platform.ToolbarConfigurable
 import im.vector.riotx.core.platform.VectorBaseActivity
 import im.vector.riotx.core.pushers.PushersManager
-import im.vector.riotx.features.disclaimer.showDisclaimerDialog
 import im.vector.riotx.features.notifications.NotificationDrawerManager
 import im.vector.riotx.features.popup.PopupAlertManager
 import im.vector.riotx.features.rageshake.VectorUncaughtExceptionHandler
@@ -194,7 +193,7 @@ class HomeActivity : VectorBaseActivity(), ToolbarConfigurable {
                     .setNegativeButton(R.string.no) { _, _ -> bugReporter.deleteCrashFile(this) }
                     .show()
         } else {
-            showDisclaimerDialog(this)
+            // showDisclaimerDialog(this)
         }
 
         // Force remote backup state update to update the banner if needed
@@ -209,14 +208,14 @@ class HomeActivity : VectorBaseActivity(), ToolbarConfigurable {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.menu_home_suggestion -> {
+            /*R.id.menu_home_suggestion -> {
                 bugReporter.openBugReportScreen(this, true)
                 return true
             }
             R.id.menu_home_report_bug -> {
                 bugReporter.openBugReportScreen(this, false)
                 return true
-            }
+            }*/
             R.id.menu_home_filter     -> {
                 navigator.openRoomsFiltering(this)
                 return true
