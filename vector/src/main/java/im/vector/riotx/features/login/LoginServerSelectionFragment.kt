@@ -21,13 +21,11 @@ import android.view.View
 import butterknife.OnClick
 import com.airbnb.mvrx.withState
 import im.vector.riotx.R
-import im.vector.riotx.core.utils.openUrlInExternalBrowser
 import kotlinx.android.synthetic.main.fragment_login_server_selection.*
-import me.gujun.android.span.span
 import javax.inject.Inject
 
 /**
- * In this screen, the user will choose between matrix.org, modular or other type of homeserver
+ * In this screen, the user will choose between different Schul-Cloud instances
  */
 class LoginServerSelectionFragment @Inject constructor() : AbstractLoginFragment() {
 
@@ -41,62 +39,72 @@ class LoginServerSelectionFragment @Inject constructor() : AbstractLoginFragment
 
     private fun updateSelectedChoice(state: LoginViewState) {
         state.serverType.let {
-            loginServerChoiceMatrixOrg.isChecked = it == ServerType.MatrixOrg
-            loginServerChoiceModular.isChecked = it == ServerType.Modular
-            loginServerChoiceOther.isChecked = it == ServerType.Other
+            loginServerChoiceSc.isChecked = it == ServerType.Sc
+            loginServerChoiceOpen.isChecked = it == ServerType.Open
+            loginServerChoiceN21.isChecked = it == ServerType.N21
+            loginServerChoiceThr.isChecked = it == ServerType.Thr
+            loginServerChoiceBrb.isChecked = it == ServerType.Brb
         }
     }
 
     private fun initTextViews() {
-        loginServerChoiceModularLearnMore.text = span {
-            text = getString(R.string.login_server_modular_learn_more)
-            textDecorationLine = "underline"
-        }
     }
 
-    @OnClick(R.id.loginServerChoiceModularLearnMore)
-    fun learMore() {
-        openUrlInExternalBrowser(requireActivity(), MODULAR_LINK)
-    }
-
-    @OnClick(R.id.loginServerChoiceMatrixOrg)
-    fun selectMatrixOrg() {
-        if (loginServerChoiceMatrixOrg.isChecked) {
+    @OnClick(R.id.loginServerChoiceSc)
+    fun selectSc() {
+        if (loginServerChoiceSc.isChecked) {
             // Consider this is a submit
             submit()
         } else {
-            loginViewModel.handle(LoginAction.UpdateServerType(ServerType.MatrixOrg))
+            loginViewModel.handle(LoginAction.UpdateServerType(ServerType.Sc))
         }
     }
 
-    @OnClick(R.id.loginServerChoiceModular)
-    fun selectModular() {
-        if (loginServerChoiceModular.isChecked) {
+    @OnClick(R.id.loginServerChoiceOpen)
+    fun selectOpen() {
+        if (loginServerChoiceOpen.isChecked) {
             // Consider this is a submit
             submit()
         } else {
-            loginViewModel.handle(LoginAction.UpdateServerType(ServerType.Modular))
+            loginViewModel.handle(LoginAction.UpdateServerType(ServerType.Open))
         }
     }
 
-    @OnClick(R.id.loginServerChoiceOther)
-    fun selectOther() {
-        if (loginServerChoiceOther.isChecked) {
+    @OnClick(R.id.loginServerChoiceN21)
+    fun selectN21() {
+        if (loginServerChoiceN21.isChecked) {
             // Consider this is a submit
             submit()
         } else {
-            loginViewModel.handle(LoginAction.UpdateServerType(ServerType.Other))
+            loginViewModel.handle(LoginAction.UpdateServerType(ServerType.N21))
+        }
+    }
+
+    @OnClick(R.id.loginServerChoiceThr)
+    fun selectThr() {
+        if (loginServerChoiceThr.isChecked) {
+            // Consider this is a submit
+            submit()
+        } else {
+            loginViewModel.handle(LoginAction.UpdateServerType(ServerType.Thr))
+        }
+    }
+
+    @OnClick(R.id.loginServerChoiceBrb)
+    fun selectBrb() {
+        if (loginServerChoiceBrb.isChecked) {
+            // Consider this is a submit
+            submit()
+        } else {
+            loginViewModel.handle(LoginAction.UpdateServerType(ServerType.Brb))
         }
     }
 
     @OnClick(R.id.loginServerSubmit)
     fun submit() = withState(loginViewModel) { state ->
-        if (state.serverType == ServerType.MatrixOrg) {
-            // Request login flow here
-            loginViewModel.handle(LoginAction.UpdateHomeServer(getString(R.string.matrix_org_server_url)))
-        } else {
-            loginSharedActionViewModel.post(LoginNavigation.OnServerSelectionDone)
-        }
+        // TODO(JonasWanke): Change to live server when it's available
+        // loginViewModel.handle(LoginAction.UpdateHomeServer("https://matrix.${state.serverType.url}"))
+        loginViewModel.handle(LoginAction.UpdateHomeServer("https://matrix.stomt.com"))
     }
 
     override fun resetViewModel() {

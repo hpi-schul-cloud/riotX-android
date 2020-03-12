@@ -29,150 +29,133 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/loginServerText"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/layout_vertical_margin"
-                android:gravity="start"
-                android:text="@string/login_server_text"
-                android:textAppearance="@style/TextAppearance.Vector.Login.Text"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/loginServerTitle" />
-
             <im.vector.riotx.core.platform.CheckableConstraintLayout
-                android:id="@+id/loginServerChoiceMatrixOrg"
+                android:id="@+id/loginServerChoiceSc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:background="@drawable/bg_login_server_selector"
-                android:contentDescription="@string/login_a11y_choose_matrix_org"
-                android:minHeight="80dp"
+                android:layout_marginTop="8dp"
+                android:foreground="@drawable/bg_login_server_selector"
+                android:background="#1FB10438"
+                android:minHeight="48dp"
                 android:paddingStart="@dimen/layout_horizontal_margin"
                 android:paddingEnd="@dimen/layout_horizontal_margin"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/loginServerText">
-
-                <ImageView
-                    android:id="@+id/loginServerChoiceMatrixOrgIcon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:importantForAccessibility="no"
-                    android:src="@drawable/ic_logo_matrix_org"
-                    app:layout_constraintBottom_toTopOf="@+id/loginServerChoiceMatrixOrgText"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_chainStyle="packed" />
+                app:layout_constraintTop_toBottomOf="@+id/loginServerTitle">
 
                 <TextView
-                    android:id="@+id/loginServerChoiceMatrixOrgText"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:gravity="start"
-                    android:text="@string/login_server_matrix_org_text"
-                    android:textAppearance="@style/TextAppearance.Vector.Login.Text.Small"
+                    android:text="HPI Schul-Cloud"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/loginServerChoiceMatrixOrgIcon" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText" />
 
             </im.vector.riotx.core.platform.CheckableConstraintLayout>
 
             <im.vector.riotx.core.platform.CheckableConstraintLayout
-                android:id="@+id/loginServerChoiceModular"
+                android:id="@+id/loginServerChoiceOpen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/layout_vertical_margin"
-                android:background="@drawable/bg_login_server_selector"
-                android:contentDescription="@string/login_a11y_choose_modular"
-                android:minHeight="80dp"
-                android:paddingStart="@dimen/layout_horizontal_margin"
-                android:paddingEnd="0dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/loginServerChoiceMatrixOrg">
-
-                <ImageView
-                    android:id="@+id/loginServerChoiceModularIcon"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:importantForAccessibility="no"
-                    android:src="@drawable/ic_logo_modular"
-                    app:layout_constraintBottom_toTopOf="@+id/loginServerChoiceModularText"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_chainStyle="packed" />
-
-                <TextView
-                    android:id="@+id/loginServerChoiceModularText"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="7dp"
-                    android:gravity="start"
-                    android:text="@string/login_server_modular_text"
-                    android:textAppearance="@style/TextAppearance.Vector.Login.Text.Small"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/loginServerChoiceModularLearnMore"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/loginServerChoiceModularIcon" />
-
-                <TextView
-                    android:id="@+id/loginServerChoiceModularLearnMore"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:text="@string/login_server_modular_learn_more"
-                    android:textAppearance="@style/TextAppearance.Vector.Login.Text.Small"
-                    android:textColor="@color/riotx_accent"
-                    app:layout_constraintBottom_toBottomOf="@+id/loginServerChoiceModularText"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/loginServerChoiceModularText" />
-
-            </im.vector.riotx.core.platform.CheckableConstraintLayout>
-
-            <im.vector.riotx.core.platform.CheckableConstraintLayout
-                android:id="@+id/loginServerChoiceOther"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/layout_vertical_margin"
-                android:background="@drawable/bg_login_server_selector"
-                android:contentDescription="@string/login_a11y_choose_other"
-                android:minHeight="80dp"
+                android:layout_marginTop="8dp"
+                android:foreground="@drawable/bg_login_server_selector"
+                android:background="#1F126dc4"
+                android:minHeight="48dp"
                 android:paddingStart="@dimen/layout_horizontal_margin"
                 android:paddingEnd="@dimen/layout_horizontal_margin"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/loginServerChoiceModular">
+                app:layout_constraintTop_toBottomOf="@+id/loginServerChoiceSc">
 
                 <TextView
-                    android:id="@+id/loginServerChoiceOtherTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="start"
-                    android:text="@string/login_server_other_title"
-                    android:textAppearance="@style/TextAppearance.Vector.Login.Text"
-                    android:textColor="?riotx_text_primary"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toTopOf="@+id/loginServerChoiceOtherText"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_chainStyle="packed" />
-
-                <TextView
-                    android:id="@+id/loginServerChoiceOtherText"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:gravity="start"
-                    android:text="@string/login_server_other_text"
-                    android:textAppearance="@style/TextAppearance.Vector.Login.Text.Small"
+                    android:text="Open Schul-Cloud"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/loginServerChoiceOtherTitle" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText" />
+
+            </im.vector.riotx.core.platform.CheckableConstraintLayout>
+
+            <im.vector.riotx.core.platform.CheckableConstraintLayout
+                android:id="@+id/loginServerChoiceN21"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:foreground="@drawable/bg_login_server_selector"
+                android:background="#1F78aae5"
+                android:minHeight="48dp"
+                android:paddingStart="@dimen/layout_horizontal_margin"
+                android:paddingEnd="@dimen/layout_horizontal_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/loginServerChoiceOpen">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Niedersächsische Bildungscloud"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText" />
+
+            </im.vector.riotx.core.platform.CheckableConstraintLayout>
+
+            <im.vector.riotx.core.platform.CheckableConstraintLayout
+                android:id="@+id/loginServerChoiceThr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:foreground="@drawable/bg_login_server_selector"
+                android:background="#1F185888"
+                android:minHeight="48dp"
+                android:paddingStart="@dimen/layout_horizontal_margin"
+                android:paddingEnd="@dimen/layout_horizontal_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/loginServerChoiceN21">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Thüringer Schulcloud"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText" />
+
+            </im.vector.riotx.core.platform.CheckableConstraintLayout>
+
+            <im.vector.riotx.core.platform.CheckableConstraintLayout
+                android:id="@+id/loginServerChoiceBrb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:foreground="@drawable/bg_login_server_selector"
+                android:background="#1F449494"
+                android:minHeight="48dp"
+                android:paddingStart="@dimen/layout_horizontal_margin"
+                android:paddingEnd="@dimen/layout_horizontal_margin"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/loginServerChoiceThr">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Schul-Cloud Brandenburg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText" />
 
             </im.vector.riotx.core.platform.CheckableConstraintLayout>
 
@@ -187,7 +170,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/loginServerChoiceOther" />
+                app:layout_constraintTop_toBottomOf="@+id/loginServerChoiceBrb" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

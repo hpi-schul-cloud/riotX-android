@@ -87,9 +87,10 @@ open class LoginActivity : VectorBaseActivity(), ToolbarConfigurable {
     final override fun getLayoutRes() = R.layout.activity_login
 
     override fun initUiAndData() {
-        if (isFirstCreation()) {
-            addFirstFragment()
-        }
+        // Login splash is disabled for now
+//        if (isFirstCreation()) {
+//            addFirstFragment()
+//        }
 
         // Get config extra
         val loginConfig = intent.getParcelableExtra<LoginConfig?>(EXTRA_CONFIG)
@@ -118,6 +119,8 @@ open class LoginActivity : VectorBaseActivity(), ToolbarConfigurable {
                     handleLoginViewEvents(it)
                 }
                 .disposeOnDestroy()
+
+        loginSharedActionViewModel.post(LoginNavigation.OpenServerSelection)
     }
 
     protected open fun addFirstFragment() {
@@ -138,7 +141,7 @@ open class LoginActivity : VectorBaseActivity(), ToolbarConfigurable {
                             // TODO Disabled because it provokes a flickering
                             // ft.setCustomAnimations(enterAnim, exitAnim, popEnterAnim, popExitAnim)
                         })
-            is LoginNavigation.OnServerSelectionDone                      -> onServerSelectionDone()
+            is LoginNavigation.OnServerSelectionDone                      -> Unit
             is LoginNavigation.OnSignModeSelected                         -> onSignModeSelected()
             is LoginNavigation.OnLoginFlowRetrieved                       ->
                 addFragmentToBackstack(R.id.loginFragmentContainer,
@@ -237,16 +240,6 @@ open class LoginActivity : VectorBaseActivity(), ToolbarConfigurable {
                 .setMessage(getString(R.string.login_sso_error_message, onWebLoginError.description, onWebLoginError.errorCode))
                 .setPositiveButton(R.string.ok, null)
                 .show()
-    }
-
-    private fun onServerSelectionDone() = withState(loginViewModel) { state ->
-        when (state.serverType) {
-            ServerType.MatrixOrg -> Unit // In this case, we wait for the login flow
-            ServerType.Modular,
-            ServerType.Other     -> addFragmentToBackstack(R.id.loginFragmentContainer,
-                    LoginServerUrlFormFragment::class.java,
-                    option = commonOption)
-        }
     }
 
     private fun onSignModeSelected() = withState(loginViewModel) { state ->

@@ -7,6 +7,4 @@
         android:width="1.2dp"
         android:color="@color/riotx_accent" />
 
-    <solid android:color="@color/white" />
-
 </shape>

@@ -20,7 +20,6 @@ import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.EditorInfo
-import androidx.core.view.isVisible
 import butterknife.OnClick
 import com.jakewharton.rxbinding3.widget.textChanges
 import im.vector.riotx.R
@@ -59,7 +58,7 @@ class LoginServerUrlFormFragment @Inject constructor() : AbstractLoginFragment()
         }
     }
 
-    private fun setupUi(state: LoginViewState) {
+    /*private fun setupUi(state: LoginViewState) {
         when (state.serverType) {
             ServerType.Modular -> {
                 loginServerUrlFormIcon.isVisible = true
@@ -79,7 +78,7 @@ class LoginServerUrlFormFragment @Inject constructor() : AbstractLoginFragment()
             }
             else               -> error("This fragment should not be displayed in matrix.org mode")
         }
-    }
+    }*/
 
     @OnClick(R.id.loginServerUrlFormLearnMore)
     fun learnMore() {
@@ -122,7 +121,7 @@ class LoginServerUrlFormFragment @Inject constructor() : AbstractLoginFragment()
     }
 
     override fun updateWithState(state: LoginViewState) {
-        setupUi(state)
+//        setupUi(state)
 
         if (state.loginMode != LoginMode.Unknown) {
             // The home server url is valid

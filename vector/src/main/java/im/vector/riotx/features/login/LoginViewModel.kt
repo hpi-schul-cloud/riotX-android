@@ -262,7 +262,7 @@ class LoginViewModel @AssistedInject constructor(@Assisted initialState: LoginVi
             LoginAction.ResetHomeServerType -> {
                 setState {
                     copy(
-                            serverType = ServerType.MatrixOrg
+                            serverType = ServerType.Sc
                     )
                 }
             }

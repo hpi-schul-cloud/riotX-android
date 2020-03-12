@@ -16,8 +16,10 @@
 
 package im.vector.riotx.features.login
 
-enum class ServerType {
-    MatrixOrg,
-    Modular,
-    Other
+enum class ServerType(val title: String, val url: String) {
+    Sc("HPI Schul-Cloud", "schul-cloud.org"),
+    Open("Open Schul-Cloud", "open.schul-cloud.org"),
+    N21("Niedersächsische Bildungscloud", "niedersachsen.cloud"),
+    Thr("Thüringer Schulcloud", "schulcloud-thueringen.de"),
+    Brb("Schul-Cloud Brandenburg", "brandenburg.schul-cloud.org"),
 }

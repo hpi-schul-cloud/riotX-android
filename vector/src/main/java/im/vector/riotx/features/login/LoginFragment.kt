@@ -31,7 +31,6 @@ import im.vector.matrix.android.api.failure.MatrixError
 import im.vector.riotx.R
 import im.vector.riotx.core.extensions.hideKeyboard
 import im.vector.riotx.core.extensions.showPassword
-import im.vector.riotx.core.extensions.toReducedUrl
 import io.reactivex.Observable
 import io.reactivex.functions.BiFunction
 import io.reactivex.rxkotlin.subscribeBy
@@ -103,25 +102,9 @@ class LoginFragment @Inject constructor() : AbstractLoginFragment() {
             SignMode.SignIn  -> R.string.login_signin_username_hint
         })
 
-        when (state.serverType) {
-            ServerType.MatrixOrg -> {
-                loginServerIcon.isVisible = true
-                loginServerIcon.setImageResource(R.drawable.ic_logo_matrix_org)
-                loginTitle.text = getString(resId, state.homeServerUrl.toReducedUrl())
-                loginNotice.text = getString(R.string.login_server_matrix_org_text)
-            }
-            ServerType.Modular   -> {
-                loginServerIcon.isVisible = true
-                loginServerIcon.setImageResource(R.drawable.ic_logo_modular)
-                loginTitle.text = getString(resId, "Modular")
-                loginNotice.text = getString(R.string.login_server_modular_text)
-            }
-            ServerType.Other     -> {
-                loginServerIcon.isVisible = false
-                loginTitle.text = getString(resId, state.homeServerUrl.toReducedUrl())
-                loginNotice.text = getString(R.string.login_server_other_text)
-            }
-        }
+        loginServerIcon.isVisible = false
+        loginTitle.text = state.serverType.title
+        loginNotice.isVisible = false
     }
 
     private fun setupButtons(state: LoginViewState) {

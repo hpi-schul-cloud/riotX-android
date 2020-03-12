@@ -1876,7 +1876,7 @@ Wenn du diese neue Wiederherstellungsmethode nicht eingerichtet hast, kann ein A
     <string name="login_splash_text2">Halte Gespräche mittels Verschlüsselung privat</string>
     <string name="login_splash_submit">Beginne</string>
 
-    <string name="login_server_title">Wähle einen Server</string>
+    <string name="login_server_title">Anmelden mit</string>
     <string name="login_server_text">Genau wie bei Emails haben Accounts ein Zuhause, auch wenn du mit jedem kommunizieren kannst</string>
     <string name="login_server_matrix_org_text">Folge Millionen anderen kostenlos auf dem größten öffentlichen Server</string>
     <string name="login_server_modular_text">Premium Hosting für Organisationen</string>

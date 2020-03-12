@@ -32,7 +32,7 @@ data class LoginViewState(
 
         // User choices
         @PersistState
-        val serverType: ServerType = ServerType.MatrixOrg,
+        val serverType: ServerType = ServerType.Sc,
         @PersistState
         val signMode: SignMode = SignMode.Unknown,
         @PersistState
