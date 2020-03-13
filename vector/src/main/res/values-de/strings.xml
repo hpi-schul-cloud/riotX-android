@@ -702,7 +702,7 @@ Unbekannte Geräte:</string>
     <string name="larger">Größer</string>
     <string name="tiny">Sehr klein</string>
     <string name="huge">Riesig</string>
-    <string name="settings_theme">Thema</string>
+    <string name="settings_theme">Design</string>
 
     <string name="settings_12_24_timestamps">Zeige Zeitstempel im 12-Stunden-Format</string>
 
@@ -724,9 +724,9 @@ Unbekannte Geräte:</string>
     <string name="settings_notification_ringtone">Benachrichtigungston</string>
     <string name="widget_integration_failed_to_send_request">Anfrage konnte nicht gesendet werden.</string>
     <string name="widget_integration_missing_user_id">Anfrage enthält keine user_id.</string>
-    <string name="light_theme">Helles Thema</string>
-    <string name="dark_theme">Dunkles Thema</string>
-    <string name="black_them">Schwarzes Thema</string>
+    <string name="light_theme">Helles Design</string>
+    <string name="dark_theme">Dunkles Design</string>
+    <string name="black_them">Schwarzes Design</string>
 
     <string name="login_mobile_device">Mobilgerät</string>
 
@@ -1049,7 +1049,7 @@ Beachte: Diese Aktion wird die App neu starten und einige Zeit brauchen.</string
     <string name="unknown_error">Entschuldige, ein Fehler trat auf</string>
 
     <string name="room_sliding_menu_version_x">Version %s</string>
-    <string name="status_theme">Status.im-Thema</string>
+    <string name="status_theme">Status.im-Design</string>
 
     <string name="encryption_export_notice">Bitte eine Passphrase erstellen um exportierte Schlüssel zu verschlüsseln. Du musst dieselbe Passphrase eingeben um die Schlüssel importieren zu können.</string>
     <string name="passphrase_create_passphrase">Erzeuge Passphrase</string>
@@ -1774,7 +1774,7 @@ Wenn du diese neue Wiederherstellungsmethode nicht eingerichtet hast, kann ein A
 \n
 \nHinweis: Dies ist eine Beta-Version. RiotX wird aktuell aktiv entwickelt und enthält Einschränkungen und (wir hoffen nicht zu viele) Fehler. Jede Rückmeldung ist willkommen!
 \n
-\nRiotX unterstützt: • Anmelden an ein existierendes Konto • Erstelle Räume und trete öffentlichen Räumen bei • Akzeptiere und lehne Einladungen ab • Zeige Raum-Details • Sende Textnachrichten • Sende Anhänge • Lese und Schreibe Nachrichten in verschlüsselten Räumen • Verschlüsselung: Backup der Ende-zu-Ende-Schlüssel, erweiterte Geräteverifizierung, Schlüsseltauschanfragen und -antworten • Push-Benachrichtigungen • Helles, dunkles und schwarzes Thema
+\nRiotX unterstützt: • Anmelden an ein existierendes Konto • Erstelle Räume und trete öffentlichen Räumen bei • Akzeptiere und lehne Einladungen ab • Zeige Raum-Details • Sende Textnachrichten • Sende Anhänge • Lese und Schreibe Nachrichten in verschlüsselten Räumen • Verschlüsselung: Backup der Ende-zu-Ende-Schlüssel, erweiterte Geräteverifizierung, Schlüsseltauschanfragen und -antworten • Push-Benachrichtigungen • Helles, dunkles und schwarzes Design
 \n
 \nNicht alle Features in Riot sind bisher in RiotX implementiert. Hauptfunktionen, die noch fehlen (und bald kommen!): • Raum-Einstellungen (Raum-Mitglieder auflisten, etc.) • Anrufe • Widgets • …</string>
 
@@ -1893,7 +1893,7 @@ Wenn du diese neue Wiederherstellungsmethode nicht eingerichtet hast, kann ein A
     <string name="error_handling_incoming_share">Zu teilende Daten nicht verarbeitbar</string>
 
     <string name="login_splash_text3">Erweitere &amp; individualisiere dein Benutzererlebnis</string>
-    <string name="login_connect_to">Verbinde mit %1$s</string>
+    <string name="login_connect_to">Verbinde dich mit %1$s</string>
     <string name="login_connect_to_modular">Mit Modular verbinden</string>
     <string name="login_connect_to_a_custom_server">Mit einem benutzerdefinierten Server verbinden</string>
     <string name="login_signin_to">Bei %1$s anmelden</string>

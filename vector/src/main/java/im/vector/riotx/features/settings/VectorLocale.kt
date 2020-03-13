@@ -38,7 +38,7 @@ object VectorLocale {
     private const val APPLICATION_LOCALE_LANGUAGE_KEY = "APPLICATION_LOCALE_LANGUAGE_KEY"
     private const val APPLICATION_LOCALE_SCRIPT_KEY = "APPLICATION_LOCALE_SCRIPT_KEY"
 
-    private val defaultLocale = Locale("en", "US")
+    private val defaultLocale = Locale("de", "DE")
 
     /**
      * The supported application languages
@@ -58,22 +58,22 @@ object VectorLocale {
     fun init(context: Context) {
         val preferences = PreferenceManager.getDefaultSharedPreferences(context)
 
-        if (preferences.contains(APPLICATION_LOCALE_LANGUAGE_KEY)) {
-            applicationLocale = Locale(preferences.getString(APPLICATION_LOCALE_LANGUAGE_KEY, ""),
-                    preferences.getString(APPLICATION_LOCALE_COUNTRY_KEY, ""),
-                    preferences.getString(APPLICATION_LOCALE_VARIANT_KEY, "")
-            )
-        } else {
+//        if (preferences.contains(APPLICATION_LOCALE_LANGUAGE_KEY)) {
+//            applicationLocale = Locale(preferences.getString(APPLICATION_LOCALE_LANGUAGE_KEY, ""),
+//                    preferences.getString(APPLICATION_LOCALE_COUNTRY_KEY, ""),
+//                    preferences.getString(APPLICATION_LOCALE_VARIANT_KEY, "")
+//            )
+//        } else {
             applicationLocale = Locale.getDefault()
 
             // detect if the default language is used
-            val defaultStringValue = getString(context, defaultLocale, R.string.resources_country_code)
-            if (defaultStringValue == getString(context, applicationLocale, R.string.resources_country_code)) {
-                applicationLocale = defaultLocale
-            }
-
-            saveApplicationLocale(context, applicationLocale)
-        }
+//            val defaultStringValue = getString(context, defaultLocale, R.string.resources_country_code)
+//            if (defaultStringValue == getString(context, applicationLocale, R.string.resources_country_code)) {
+//                applicationLocale = defaultLocale
+//            }
+//
+//            saveApplicationLocale(context, applicationLocale)
+//        }
 
         // init the known locales in background, using kotlin coroutines
         GlobalScope.launch(Dispatchers.IO) {
