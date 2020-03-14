@@ -39,6 +39,7 @@ class LoginServerSelectionFragment @Inject constructor() : AbstractLoginFragment
 
     private fun updateSelectedChoice(state: LoginViewState) {
         state.serverType.let {
+            loginServerChoiceTest.isChecked = it == ServerType.Test
             loginServerChoiceSc.isChecked = it == ServerType.Sc
             loginServerChoiceOpen.isChecked = it == ServerType.Open
             loginServerChoiceN21.isChecked = it == ServerType.N21
@@ -48,6 +49,16 @@ class LoginServerSelectionFragment @Inject constructor() : AbstractLoginFragment
     }
 
     private fun initTextViews() {
+    }
+
+    @OnClick(R.id.loginServerChoiceTest)
+    fun selectTest() {
+        if (loginServerChoiceTest.isChecked) {
+            // Consider this is a submit
+            submit()
+        } else {
+            loginViewModel.handle(LoginAction.UpdateServerType(ServerType.Test))
+        }
     }
 
     @OnClick(R.id.loginServerChoiceSc)
