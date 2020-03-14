@@ -16,3 +16,6 @@
 ktlint
 
 vector/src/gplay/release/google-services.json
+
+*.apk
+*.aab
