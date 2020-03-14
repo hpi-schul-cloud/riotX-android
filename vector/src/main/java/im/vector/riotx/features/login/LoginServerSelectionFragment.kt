@@ -102,7 +102,7 @@ class LoginServerSelectionFragment @Inject constructor() : AbstractLoginFragment
 
     @OnClick(R.id.loginServerSubmit)
     fun submit() = withState(loginViewModel) { state ->
-         loginViewModel.handle(LoginAction.UpdateHomeServer("https://${state.serverType.url}"))
+        loginViewModel.handle(LoginAction.UpdateHomeServer("https://${state.serverType.url}"))
     }
 
     override fun resetViewModel() {

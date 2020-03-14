@@ -17,6 +17,7 @@
 package im.vector.riotx.features.login
 
 enum class ServerType(val title: String, val url: String) {
+    Test("Test", "matrix.stomt.com"),
     Sc("HPI Schul-Cloud", "matrix.messenger.schule"),
     Open("Open Schul-Cloud", "matrix.open.messenger.schule"),
     N21("Niedersächsische Bildungscloud", "matrix.niedersachsen.messenger.schule"),

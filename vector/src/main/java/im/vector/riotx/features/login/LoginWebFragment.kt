@@ -259,6 +259,7 @@ class LoginWebFragment @Inject constructor(
 
     override fun resetViewModel() {
         loginViewModel.handle(LoginAction.ResetLogin)
+        loginViewModel.handle(LoginAction.ResetSignMode)
     }
 
     override fun onBackPressed(toolbarButton: Boolean): Boolean {
