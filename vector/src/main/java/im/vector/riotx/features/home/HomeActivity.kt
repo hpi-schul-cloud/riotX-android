@@ -20,7 +20,6 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
@@ -183,7 +182,7 @@ class HomeActivity : VectorBaseActivity(), ToolbarConfigurable {
     override fun onResume() {
         super.onResume()
 
-        if (vectorUncaughtExceptionHandler.didAppCrash(this)) {
+        /*if (vectorUncaughtExceptionHandler.didAppCrash(this)) {
             vectorUncaughtExceptionHandler.clearAppCrashStatus(this)
 
             AlertDialog.Builder(this)
@@ -193,8 +192,8 @@ class HomeActivity : VectorBaseActivity(), ToolbarConfigurable {
                     .setNegativeButton(R.string.no) { _, _ -> bugReporter.deleteCrashFile(this) }
                     .show()
         } else {
-            // showDisclaimerDialog(this)
-        }
+            showDisclaimerDialog(this)
+        }*/
 
         // Force remote backup state update to update the banner if needed
         viewModelProvider.get(SignOutViewModel::class.java).refreshRemoteStateIfNeeded()
