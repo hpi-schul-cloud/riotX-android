@@ -29,12 +29,12 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <im.vector.riotx.core.platform.CheckableConstraintLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/loginServerChoiceTest"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:background="@drawable/bg_login_server_selector"
+                android:background="@drawable/bg_login_server"
                 android:minHeight="48dp"
                 android:paddingStart="@dimen/layout_horizontal_margin"
                 android:paddingEnd="@dimen/layout_horizontal_margin"
@@ -52,14 +52,14 @@
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="HardcodedText" />
 
-            </im.vector.riotx.core.platform.CheckableConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <im.vector.riotx.core.platform.CheckableConstraintLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/loginServerChoiceSc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:foreground="@drawable/bg_login_server_selector"
+                android:foreground="@drawable/bg_login_server"
                 android:background="#1FB10438"
                 android:minHeight="48dp"
                 android:paddingStart="@dimen/layout_horizontal_margin"
@@ -78,14 +78,14 @@
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="HardcodedText" />
 
-            </im.vector.riotx.core.platform.CheckableConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <im.vector.riotx.core.platform.CheckableConstraintLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/loginServerChoiceOpen"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:foreground="@drawable/bg_login_server_selector"
+                android:foreground="@drawable/bg_login_server"
                 android:background="#1F126dc4"
                 android:minHeight="48dp"
                 android:paddingStart="@dimen/layout_horizontal_margin"
@@ -104,14 +104,14 @@
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="HardcodedText" />
 
-            </im.vector.riotx.core.platform.CheckableConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <im.vector.riotx.core.platform.CheckableConstraintLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/loginServerChoiceN21"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:foreground="@drawable/bg_login_server_selector"
+                android:foreground="@drawable/bg_login_server"
                 android:background="#1F78aae5"
                 android:minHeight="48dp"
                 android:paddingStart="@dimen/layout_horizontal_margin"
@@ -130,14 +130,14 @@
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="HardcodedText" />
 
-            </im.vector.riotx.core.platform.CheckableConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <im.vector.riotx.core.platform.CheckableConstraintLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/loginServerChoiceThr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:foreground="@drawable/bg_login_server_selector"
+                android:foreground="@drawable/bg_login_server"
                 android:background="#1F185888"
                 android:minHeight="48dp"
                 android:paddingStart="@dimen/layout_horizontal_margin"
@@ -156,14 +156,14 @@
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="HardcodedText" />
 
-            </im.vector.riotx.core.platform.CheckableConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <im.vector.riotx.core.platform.CheckableConstraintLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/loginServerChoiceBrb"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:foreground="@drawable/bg_login_server_selector"
+                android:foreground="@drawable/bg_login_server"
                 android:background="#1F449494"
                 android:minHeight="48dp"
                 android:paddingStart="@dimen/layout_horizontal_margin"
@@ -182,20 +182,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="HardcodedText" />
 
-            </im.vector.riotx.core.platform.CheckableConstraintLayout>
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/loginServerSubmit"
-                style="@style/Style.Vector.Login.Button"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:text="@string/login_continue"
-                android:transitionName="loginSubmitTransition"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/loginServerChoiceBrb" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

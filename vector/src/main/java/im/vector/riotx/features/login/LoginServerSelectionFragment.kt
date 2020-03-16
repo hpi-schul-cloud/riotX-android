@@ -16,12 +16,9 @@
 
 package im.vector.riotx.features.login
 
-import android.os.Bundle
-import android.view.View
 import butterknife.OnClick
 import com.airbnb.mvrx.withState
 import im.vector.riotx.R
-import kotlinx.android.synthetic.main.fragment_login_server_selection.*
 import javax.inject.Inject
 
 /**
@@ -31,88 +28,26 @@ class LoginServerSelectionFragment @Inject constructor() : AbstractLoginFragment
 
     override fun getLayoutResId() = R.layout.fragment_login_server_selection
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        initTextViews()
-    }
-
-    private fun updateSelectedChoice(state: LoginViewState) {
-        state.serverType.let {
-            loginServerChoiceTest.isChecked = it == ServerType.Test
-            loginServerChoiceSc.isChecked = it == ServerType.Sc
-            loginServerChoiceOpen.isChecked = it == ServerType.Open
-            loginServerChoiceN21.isChecked = it == ServerType.N21
-            loginServerChoiceThr.isChecked = it == ServerType.Thr
-            loginServerChoiceBrb.isChecked = it == ServerType.Brb
-        }
-    }
-
-    private fun initTextViews() {
-    }
-
     @OnClick(R.id.loginServerChoiceTest)
-    fun selectTest() {
-        if (loginServerChoiceTest.isChecked) {
-            // Consider this is a submit
-            submit()
-        } else {
-            loginViewModel.handle(LoginAction.UpdateServerType(ServerType.Test))
-        }
-    }
+    fun selectTest() = submit(ServerType.Test)
 
     @OnClick(R.id.loginServerChoiceSc)
-    fun selectSc() {
-        if (loginServerChoiceSc.isChecked) {
-            // Consider this is a submit
-            submit()
-        } else {
-            loginViewModel.handle(LoginAction.UpdateServerType(ServerType.Sc))
-        }
-    }
+    fun selectSc() = submit(ServerType.Sc)
 
     @OnClick(R.id.loginServerChoiceOpen)
-    fun selectOpen() {
-        if (loginServerChoiceOpen.isChecked) {
-            // Consider this is a submit
-            submit()
-        } else {
-            loginViewModel.handle(LoginAction.UpdateServerType(ServerType.Open))
-        }
-    }
+    fun selectOpen() = submit(ServerType.Open)
 
     @OnClick(R.id.loginServerChoiceN21)
-    fun selectN21() {
-        if (loginServerChoiceN21.isChecked) {
-            // Consider this is a submit
-            submit()
-        } else {
-            loginViewModel.handle(LoginAction.UpdateServerType(ServerType.N21))
-        }
-    }
+    fun selectN21() = submit(ServerType.N21)
 
     @OnClick(R.id.loginServerChoiceThr)
-    fun selectThr() {
-        if (loginServerChoiceThr.isChecked) {
-            // Consider this is a submit
-            submit()
-        } else {
-            loginViewModel.handle(LoginAction.UpdateServerType(ServerType.Thr))
-        }
-    }
+    fun selectThr() = submit(ServerType.Thr)
 
     @OnClick(R.id.loginServerChoiceBrb)
-    fun selectBrb() {
-        if (loginServerChoiceBrb.isChecked) {
-            // Consider this is a submit
-            submit()
-        } else {
-            loginViewModel.handle(LoginAction.UpdateServerType(ServerType.Brb))
-        }
-    }
+    fun selectBrb() = submit(ServerType.Brb)
 
-    @OnClick(R.id.loginServerSubmit)
-    fun submit() = withState(loginViewModel) { state ->
+    fun submit(serverType: ServerType) = withState(loginViewModel) { state ->
+        loginViewModel.handle(LoginAction.UpdateServerType(serverType))
         loginViewModel.handle(LoginAction.UpdateHomeServer("https://${state.serverType.url}"))
     }
 
@@ -121,7 +56,7 @@ class LoginServerSelectionFragment @Inject constructor() : AbstractLoginFragment
     }
 
     override fun updateWithState(state: LoginViewState) {
-        updateSelectedChoice(state)
+//        updateSelectedChoice(state)
 
         if (state.loginMode != LoginMode.Unknown) {
             // LoginFlow for matrix.org has been retrieved
